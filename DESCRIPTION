@@ -1,6 +1,6 @@
 Package: undidRjl
-Version: 0.0.2
-Date: 2024-07-15
+Version: 0.0.3
+Date: 2024-09-09
 Title: Unpooled Difference-In-Differences
 Authors@R: 
     person("Eric", "Jamieson", role = c("aut"), email = "ericbrucejamieson@gmail.com")
