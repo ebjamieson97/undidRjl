@@ -2,7 +2,7 @@
 % Please edit documentation in R/undid_stage_two.R
 \name{undid_stage_two}
 \alias{undid_stage_two}
-\title{TITLE}
+\title{Fill in the empty_diff_df.csv with the relevant diff_estimate values at each silo.}
 \usage{
 undid_stage_two(
   filepath,
@@ -30,10 +30,10 @@ undid_stage_two(
 \item{consider_covariates}{A logical value (default \code{TRUE}), indicating whether to consider covariates}
 }
 \description{
-The \code{undid_stage_two} function DESCRIPTION.
+The \code{undid_stage_two} function uses information on dates from the empty_diff_df.csv and the local silo data to fill in the necessary diff_estimates.
 }
 \details{
-ADD_DETAILS_HERE
+details here
 }
 \examples{
 silo_data <- read_dta("C:/Users/User/Documents/Data/State71.dta")
