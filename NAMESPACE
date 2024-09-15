@@ -3,6 +3,8 @@
 export(checkundidversion)
 export(create_diff_df)
 export(create_init_csv)
+export(plot_parallel_trends)
+export(undid_stage_three)
 export(undid_stage_two)
 export(updateundid)
 import(JuliaCall)
