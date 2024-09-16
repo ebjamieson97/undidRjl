@@ -13,9 +13,9 @@ devtools::install_github("ebjamieson97/undidRjl")
 
 JuliaCall and Julia itself can be downloaded by calling
 ```R
-install.packages("JuliaCall")
-library(JuliaCall)
-install_julia()
+install.packages("JuliaCall") # installs JuliaCall
+library(JuliaCall) # loads JuliaCall
+install_julia() # installs Julia
 ```
 
 ### Utility Commands
