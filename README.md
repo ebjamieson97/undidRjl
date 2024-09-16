@@ -22,19 +22,21 @@ install_julia() # installs Julia
 
 #### 1. `checkundidversion()`
 
-Arguments: none
-
 Checks and prints the currently installed and the latest version of Undid.jl package. If the installed version is out of date, it will prompt you to consider updating using the function `updateundid()`. If Undid.jl is not installed, installs Undid.jl.
+
+Arguments: none
 
 #### 2. `updateundid()`
 
-Arguments: none
-
 Updates Undid.jl to the latest version if Undid.jl is already installed.
+
+Arguments: none
 
 ## Stage One: Initialize
 
 #### 3. `create_init_csv()`
+
+Generates an initial `.csv` file (`init.csv`) specifying the silo names, start times, end times, and treatment times. This file is used to then create the `empty_diff_df.csv` which is sent to each silo.
 
 **Arguments**:
 - **`silo_names`** :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of silo names, e.g. `c("71", "73")`.
@@ -42,7 +44,5 @@ Updates Undid.jl to the latest version if Undid.jl is already installed.
 - **`end_times`** :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of end times, corresponding to the silos. 
 - **`treatment_times`** :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of treatment times or "control", indicating when treatment started for each silo. 
 - **`covariates`** :: `character vector` or `FALSE` (optional) (defaults ~ `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
-
-Generates an initial `.csv` file (`init.csv`) specifying the silos, start times, end times, and treatment (or control) times. This file is used to initialize the process of silo analysis.
 
 
