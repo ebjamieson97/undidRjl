@@ -20,11 +20,9 @@ install_julia()
 
 ### Utility Commands
 
-1. **checkundidversion()**
+1. `checkundidversion()`
 
-```r
-> checkundidversion()
-Currently installed version of Undid.jl is: 0.1.13. 
-Latest version of Undid.jl is: 0.1.13 
-Consider calling function `updateundid` if installed version is out of date.
-```
+Arguments: none
+
+Checks and prints the currently installed and the latest version of Undid.jl package. If the installed version is out of date, it will prompt you to consider updating using the function `updateundid()`.
+
