@@ -36,7 +36,9 @@ Arguments: none
 
 #### 3. `create_init_csv()`
 
-Generates an initial `.csv` file (`init.csv`) specifying the silo names, start times, end times, and treatment times. This file is then used to create the `empty_diff_df.csv`, which is sent to each silo. If `create_init_csv()` is called without providing any silo names, start times, end times, or treatment times, an `init.csv` will be created with the appropriate column headers and blank columns. Ensure that dates are all entered in the same date format, a list of acceptable date formats can be seen [here.](#valid-date-formats)
+Generates an initial `.csv` file (`init.csv`) specifying the silo names, start times, end times, and treatment times. This file is then used to create the `empty_diff_df.csv`, which is sent to each silo. If `create_init_csv()` is called without providing any silo names, start times, end times, or treatment times, an `init.csv` will be created with the appropriate column headers and blank columns. 
+
+Ensure that dates are all entered in the same date format, a list of acceptable date formats can be seen [here.](#valid-date-formats)
 
 **Arguments**:
 - **`silo_names`** :: `character vector` or `NA` (default: `NA`) — A character vector of silo names, e.g., `c("71", "73")`.
