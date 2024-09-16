@@ -37,11 +37,11 @@ Updates Undid.jl to the latest version if Undid.jl is already installed.
 #### 3. `create_init_csv()`
 
 **Arguments**:
-- `silo_names` :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of silo names, e.g. `c("71", "73")`.
-- `start_times` :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of start times, corresponding to the silos. All date arguments should be entered in the same date format, acceptable formats can be seen here.
-- `end_times` :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of end times, corresponding to the silos. All date arguments should be entered in the same date format, acceptable formats can be seen here.
-- `treatment_times` :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of treatment times or "control", indicating when treatment started for each silo. 
-- `covariates` :: `character vector` or `FALSE` (optional) (defaults ~ `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
+- **`silo_names`** :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of silo names, e.g. `c("71", "73")`.
+- **`start_times`** :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of start times, corresponding to the silos. 
+- **`end_times`** :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of end times, corresponding to the silos. 
+- **`treatment_times`** :: `character vector` or `NA` (defaults ~ `NA`) — A character vector of treatment times or "control", indicating when treatment started for each silo. 
+- **`covariates`** :: `character vector` or `FALSE` (optional) (defaults ~ `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
 
 Generates an initial `.csv` file (`init.csv`) specifying the silos, start times, end times, and treatment (or control) times. This file is used to initialize the process of silo analysis.
 
