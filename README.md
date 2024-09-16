@@ -22,7 +22,7 @@ install_julia()
 
 1. **checkundidversion()**
 
-```R
+```r
 > checkundidversion()
 Currently installed version of Undid.jl is: 0.1.13. 
 Latest version of Undid.jl is: 0.1.13 
