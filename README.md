@@ -52,11 +52,14 @@ Ensure that dates are all entered in the same date format, a list of acceptable 
 **Examples**
 ```R
 > create_init_csv(silo_names = c("ON", "QC"), start_times = c("2010", "2010"), end_times = c("2022", "2022"), treatment_times = c("control", "2016"))
-init.csv saved to: C:/Users/Eric Bruce Jamieson/Documents/Dalhousie Work/undidRjl/init.csv 
+init.csv saved to: C:/Users/User/Documents/init.csv 
   silo_name start_time end_time treatment_time
 1        ON       2010     2022        control
 2        QC       2010     2022           2016
 ```
+
+#### 4. `create_diff_df()` - Returns a dataframe and prints a filepath.
+
 
 ## Appendix
 
