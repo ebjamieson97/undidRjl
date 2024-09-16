@@ -3,6 +3,7 @@
 
 ## Installation 
 ```R
+install.packages("devtools")
 devtools::install_github("ebjamieson97/undidRjl")
 ```
 
