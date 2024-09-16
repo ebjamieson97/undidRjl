@@ -22,3 +22,9 @@ install_julia()
 
 1. **checkundidversion()**
 
+```R
+> checkundidversion()
+Currently installed version of Undid.jl is: 0.1.13. 
+Latest version of Undid.jl is: 0.1.13 
+Consider calling function `updateundid` if installed version is out of date.
+```
