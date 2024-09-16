@@ -34,7 +34,7 @@ Arguments: none
 
 ## Stage One: Initialize
 
-#### 3. `create_init_csv()`
+#### 3. `create_init_csv()` - Returns a dataframe and prints a filepath.
 
 Generates an initial `.csv` file (`init.csv`) specifying the silo names, start times, end times, and treatment times. This file is then used to create the `empty_diff_df.csv`, which is sent to each silo. If `create_init_csv()` is called without providing any silo names, start times, end times, or treatment times, an `init.csv` will be created with the appropriate column headers and blank columns. 
 
