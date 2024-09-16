@@ -36,12 +36,33 @@ Arguments: none
 
 #### 3. `create_init_csv()`
 
-Generates an initial `.csv` file (`init.csv`) specifying the silo names, start times, end times, and treatment times. This file is then used to create the `empty_diff_df.csv`, which is sent to each silo. If `create_init_csv()` is called without providing any silo names, start times, end times, or treatment times, an `init.csv` will be created with the appropriate column headers and blank columns.
-
+Generates an initial `.csv` file (`init.csv`) specifying the silo names, start times, end times, and treatment times. This file is then used to create the `empty_diff_df.csv`, which is sent to each silo. If `create_init_csv()` is called without providing any silo names, start times, end times, or treatment times, an `init.csv` will be created with the appropriate column headers and blank columns. Ensure that dates are all entered in the same date format, a list of acceptable date formats can be seen [here.](#valid-date-formats)
 **Arguments**:
 - **`silo_names`** :: `character vector` or `NA` (default: `NA`) — A character vector of silo names, e.g., `c("71", "73")`.
 - **`start_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of start times corresponding to the silos.
 - **`end_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of end times corresponding to the silos.
 - **`treatment_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of treatment times, or `"control"` to indicate when treatment started for each silo.
 - **`covariates`** :: `character vector` or `FALSE` (optional, default: `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
+
+## Appendix
+
+#### Valid Date Formats
+- `ddmonyyyy` → 25aug1990
+- `yyyym00` → 1990m8
+- `yyyy/mm/dd` → 1990/08/25
+- `yyyy-mm-dd` → 1990-08-25
+- `yyyymmdd` → 19900825
+- `yyyy/dd/mm` → 1990/25/08
+- `yyyy-dd-mm` → 1990-25-08
+- `yyyyddmm` → 19902508
+- `dd/mm/yyyy` → 25/08/1990
+- `dd-mm-yyyy` → 25-08-1990
+- `ddmmyyyy` → 25081990
+- `mm/dd/yyyy` → 08/25/1990
+- `mm-dd-yyyy` → 08-25-1990
+- `mmddyyyy` → 08251990
+- `mm/yyyy` → 08/1990
+- `mm-yyyy` → 08-1990
+- `mmyyyy` → 081990
+- `yyyy` → 1990
 
