@@ -38,6 +38,8 @@ Arguments: none
 
 Generates an initial `.csv` file (`init.csv`) specifying the silo names, start times, end times, and treatment times. This file is then used to create the `empty_diff_df.csv`, which is sent to each silo. If `create_init_csv()` is called without providing any silo names, start times, end times, or treatment times, an `init.csv` will be created with the appropriate column headers and blank columns. 
 
+Covariates may be specified when calling `create_init_csv()` or when calling `create_diff_df()`.
+
 Ensure that dates are all entered in the same date format, a list of acceptable date formats can be seen [here.](#valid-date-formats)
 
 **Arguments**:
@@ -46,6 +48,15 @@ Ensure that dates are all entered in the same date format, a list of acceptable 
 - **`end_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of end times corresponding to the silos.
 - **`treatment_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of treatment times, or `"control"` to indicate when treatment started for each silo.
 - **`covariates`** :: `character vector` or `FALSE` (optional, default: `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
+
+**Examples**
+```R
+> create_init_csv(silo_names = c("ON", "QC"), start_times = c("2010", "2010"), end_times = c("2022", "2022"), treatment_times = c("control", "2016"))
+init.csv saved to: C:/Users/Eric Bruce Jamieson/Documents/Dalhousie Work/undidRjl/init.csv 
+  silo_name start_time end_time treatment_time
+1        ON       2010     2022        control
+2        QC       2010     2022           2016
+```
 
 ## Appendix
 
