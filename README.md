@@ -3,8 +3,8 @@
 
 ## Installation 
 ```R
-install.packages("devtools")
-devtools::install_github("ebjamieson97/undidRjl")
+install.packages("devtools") # if devtools is not already installed
+devtools::install_github("ebjamieson97/undidRjl") 
 ```
 
 ## Requirements
