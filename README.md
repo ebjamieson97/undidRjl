@@ -24,13 +24,11 @@ install_julia() # installs Julia
 
 Checks and prints the currently installed and the latest version of Undid.jl package. If the installed version is out of date, it will prompt you to consider updating using the function `updateundid()`. If Undid.jl is not installed, installs Undid.jl.
 
-Arguments: none
 
 #### 2. `updateundid()`
 
 Updates Undid.jl to the latest version if Undid.jl is already installed.
 
-Arguments: none
 
 ## Stage One: Initialize
 
@@ -59,6 +57,8 @@ init.csv saved to: C:/Users/User/Documents/init.csv
 ```
 
 #### 4. `create_diff_df()` - Returns a dataframe and prints a filepath.
+
+
 
 
 ## Appendix
