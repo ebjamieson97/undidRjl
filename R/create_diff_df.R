@@ -18,6 +18,8 @@
 #' df = create_diff_df("C:/Users/User/Project Files/init.csv", "yyyy", "yearly")
 create_diff_df <- function(filepath, date_format, freq, covariates = FALSE, freq_multiplier = FALSE) { 
   
+  julia_eval("using Undid")
+  
   # Pass strings to Julia
   julia_assign("filepath", filepath)
   julia_assign("date_format", date_format)

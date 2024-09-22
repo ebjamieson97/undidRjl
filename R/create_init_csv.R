@@ -30,6 +30,8 @@
 #' print(df)
 create_init_csv <- function(silo_names = NA, start_times = NA, end_times = NA, treatment_times = NA, covariates = FALSE) {
   
+  julia_eval("using Undid")
+  
   # Force character to single entry Julia string vector
   # If covariates are not specified, set to false in Julia
   # Otherwise, pass specified covariates to Julia
