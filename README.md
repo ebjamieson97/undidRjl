@@ -191,6 +191,7 @@ The `plot_parallel_trends()` function combines the trends_data.csv's and plots p
 ```R
 plot_parallel_trends("C:\\Users\\User\\Documents\\FilledTrendsData")
 ```
+![Parallel trends plot with seperated silos](./images/plot_parallel_trends_default.png)
 
 ```R
 plot_parallel_trends("C:\\Users\\User\\Documents\\FilledTrendsData",
@@ -201,6 +202,8 @@ plot_parallel_trends("C:\\Users\\User\\Documents\\FilledTrendsData",
                      title = "Effect of merit scholarship across States (1989-2000)", # Give the plot a title
                      lwd = 4) # Set the linewidth
 ```
+![Parallel trends plot with silos combined as one control line and one treatment line](./images/plot_parallel_trends_customized.png)
+
 
 
 
