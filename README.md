@@ -86,6 +86,10 @@ empty_diff_df.csv saved to: C:/Users/User/Documents/empty_diff_df.csv
 
 The `undid_stage_two()` function uses date information from the `empty_diff_df.csv` and the local silo data to fill in the necessary diff_estimates.
 
+Ensure that the `local_silo_name` reflects the spelling of the silo in the `empty_diff_df.csv` file. 
+
+Also be sure that the `time_column` contains only `character` values. This is in order to enable passing data back and forth between Julia and R. 
+
 **Arguments**:
 - **`filepath`** :: `character` — Filepath to the `empty_diff_df.csv`.
 - **`silo_data`** :: `list` — Dataframe of the local silo data. 
