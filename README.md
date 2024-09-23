@@ -84,12 +84,31 @@ empty_diff_df.csv saved to: C:/Users/User/Documents/empty_diff_df.csv
 
 #### 5. `undid_stage_two()` - 
 
-Ipsum lorem
+The `undid_stage_two()` function uses date information from the `empty_diff_df.csv` and the local silo data to fill in the necessary diff_estimates.
 
 **Arguments**:
+- **`filepath`** :: `character` — Filepath to the `empty_diff_df.csv`.
+- **`silo_data`** :: `list` — Dataframe of the local silo data. 
+- **`time_column`** `character` — Name of column where the time/date information is stored in the `silo_data`.
+- **`outcome_column`** `character` — Name of column where the outcome of interest data is stored in the `silo_data`.
+- **`local_date_format`** `character` — [Format](#valid-date-formats) of the dates in the `time_column`.
+- (optional) **`consider_covariates`** `logical` (default: `TRUE`) — If set to `FALSE`, ignores carrying out the calculations to fill the column `diff_estimate_covariates`.
 
 **Examples**
 ```R
+silo_data <- read_dta("C:/Users/User/Documents/Data/QC.dta")
+output <- undid_stage_two(filepath = "C:/Users/User/Downloads/empty_diff_df.csv", 
+local_silo_name = "QC", 
+silo_data = silo_data, 
+time_column = "year", 
+outcome_column = "coll", 
+local_date_format = "yyyy")
+
+# To view the filled_diff_data:
+print(output[[1]][2])
+
+# To view the trends_data
+print(output[[2]][2])
 ```
 
 ## Stage Three: Analysis
