@@ -149,13 +149,60 @@ If errors persist, check to see if there are missing `diff_estiamtes` in the `fi
 
 #### 7. `plot_parallel_trends()` - 
 
-Ipsum lorem
+The `plot_parallel_trends()` function combines the trends_data.csv's and plots parallel trends figures. There are a plethora of options for this function. Many arguments are the same as those used in the base functions `plot()` and `axis()`. 
 
 **Arguments**:
+- **`dir_path`** :: `character` — A string filepath to folder containing all of the `trends_data.csv`s.
+- (optional) **`covariates`** :: `logical` (default: `FALSE`) — Indicates whether or not to consider covariates.
+- (optional) **`save_csv`** :: `logical` (default: `FALSE`) — Indicates whether or not to save the `combined_trends_data.csv`.
+- (optional) **`combine`** :: `logical` (default: `FALSE`) — Indicates whether to plot each silo separately or to combine silos based on treatment status.
+- (optional) **`pch`** :: `integer` or `integer vector` (default: `NA`) — Determines the points used on the plot (range: 0 to 25).
+- (optional) **`pch_control`** :: `integer` or `integer vector` (default: `NULL`) — Determines the points used on the plot for control silos. Takes value of `pch` if `NULL`.
+- (optional) **`pch_treated`** :: `integer` or `integer vector` (default: `NULL`) — Determines the points used on the plot for treated silos. Takes value of `pch` if `NULL`.
+- (optional) **`control_colour`** :: `character vector` (default: `c("darkgrey", "lightgrey")`) — Option for control silos. If `combine = TRUE`, takes the 1st value to determine the colour of the control line.
+- (optional) **`treatment_colour`** :: `character vector` (default: `c("darkred", "lightcoral")`) — Colour options for treatment silos. If `combine = TRUE`, takes the 1st value to determine the colour of the control line.
+- (optional) **`lwd`** :: `integer` (default: `2`) — Specifies the line widths.
+- (optional) **`xlab`** :: `character` (default: `NA`) — Label for the x-axis.
+- (optional) **`ylab`** :: `character` (default: `NA`) — Label for the y-axis.
+- (optional) **`title`** :: `character` (default: `NA`) — Title of the plot.
+- (optional) **`xticks`** :: `integer` (default: `4`) — Number of ticks to display on the x-axis.
+- (optional) **`date_format`** :: `character` (default: `"%Y"`) — Format for displaying dates along the x-axis.
+- (optional) **`xdates`** :: `Date vector` (default: `NULL`) — Vector of dates to display along the x-axis.
+- (optional) **`xaxlabsz`** :: `double` (default: `0.8`) — Size of x-axis labels.
+- (optional) **`save_png`** :: `logical` (default: `FALSE`) — Indicates whether to save the plot as a PNG file.
+- (optional) **`width`** :: `integer` — Width of the saved PNG file.
+- (optional) **`height`** :: `integer` — Height of the saved PNG file.
+- (optional) **`ylim`** :: `double vector` — Min and max range for the y-axis (defaults to the min and max values in the y column of trends_data).
+- (optional) **`yaxlabsz`** :: `double` (default: `0.8`) — Size of y-axis labels.
+- (optional) **`ylabels`** :: `double vector` (default: `NULL`) — Values to appear on the y-axis.
+- (optional) **`yticks`** :: `integer` (default: `4`) — Number of values to display along the y-axis.
+- (optional) **`ydecimal`** :: `integer` — Decimal point rounding for y-axis values.
+- (optional) **`legend_location`** :: `character` (default: `topright`) — Location of the legend.
+- (optional) **`simplify_legend`** :: `logical` (default: `TRUE`) — If `TRUE`, shows one colour for treatment and control silos in the legend.
+- (optional) **`legend_text`** :: `double` (default: `0.7`) — Size of text in the legend.
+- (optional) **`legend_on`** :: `logical` (default: `TRUE`) — Whether to display the legend.
+- (optional) **`treatment_indicator_col`** :: `character` (default: `"grey"`) — Colour for the dashed vertical treatment indicator line.
+- (optional) **`treatment_indicator_alpha`** :: `double` (default: `0.5`) — Transparency level for the treatment indicator lines.
+- (optional) **`treatment_indicator_lwd`** :: `double` (default: `2`) — Line width of the treatment indicator lines.
+- (optional) **`treatment_indicator_lty`** :: `integer` (default: `2`) — Line type (lty) for the treatment indicator lines.
+
 
 **Examples**
 ```R
+plot_parallel_trends("C:\\Users\\User\\Documents\\FilledTrendsData")
 ```
+
+```R
+plot_parallel_trends("C:\\Users\\User\\Documents\\FilledTrendsData",
+                     combine = TRUE,  # Combine all the treated and control silos together
+                     ylim = c(0.25,0.5), # Set the limits of the y-axis
+                     ylabels = c(0.25, 0.31, 0.38, 0.44, 0.50), # Specify the y-values that are shown on the y-axis
+                     xdates = c("1989-01-01", "1991-01-01", "1993-01-01", "1995-01-01", "1997-01-01", "1999-01-01"), # Specify the dates that show up along the x-axis
+                     title = "Effect of merit scholarship across States (1989-2000)", # Give the plot a title
+                     lwd = 4) # Set the linewidth
+```
+
+
 
 ## Appendix
 
