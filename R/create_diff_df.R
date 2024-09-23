@@ -43,6 +43,7 @@ create_diff_df <- function(filepath, date_format, freq, covariates = FALSE, freq
     julia_eval("freq_multiplier = false")
   }
   else {
+    freq_multiplier <- as.integer(freq_multiplier)
     julia_assign("freq_multiplier", freq_multiplier)
     julia_eval("freq_multipler = Int(freq_multiplier)")
   }
