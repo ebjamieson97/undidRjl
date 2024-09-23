@@ -86,7 +86,7 @@ empty_diff_df.csv saved to: C:/Users/User/Documents/empty_diff_df.csv
 
 The `undid_stage_two()` function uses date information from the `empty_diff_df.csv` and the local silo data to fill in the necessary diff_estimates.
 
-Ensure that the `local_silo_name` reflects the spelling of the silo in the `empty_diff_df.csv` file. 
+Ensure that the `local_silo_name` reflects the spelling of the silo in the `empty_diff_df.csv` file. Likewise, ensure that the covariates specified in the `empty_diff_df.csv` are spelled the same in the local silo data.
 
 Also be sure that the `time_column` contains only `character` values. This is in order to enable passing data back and forth between Julia and R. 
 
@@ -117,14 +117,34 @@ print(output[[2]][2])
 
 ## Stage Three: Analysis
 
-#### 6. `undid_stage_three()` - 
+#### 6. `undid_stage_three()` - Returns a dataframe of results. 
 
-Ipsum lorem
+The `undid_stage_three()` function combines the `filled_diff_df.csv`'s and computes the aggregate ATT by silo, gvar, or (g,t).
+
+If errors persist, check to see if there are missing `diff_estiamtes` in the `filled_diff_df.csv`'s. If so, try setting `interpolation = "linear_function"`.
 
 **Arguments**:
+- **`dir_path`** :: `character` — Filepath to folder containing all of the `filled_diff_df.csv`'s.
+- **`agg`** :: `character` (default: `"silo"`) — The aggregation method. Either "silo", "g", or "gt".
+- **`covariates`** :: `logical` (default: `FALSE`) — Indicate whether to consider covariates or not (i.e. use values from `diff_estimate` or `diff_estimate_covariates`).
+- **`save_csv`** :: `logical` (default: `FALSE`) — Indicate whether or not to save the `combined_diff_data.csv`. The `UNDID_results.csv` is saved to the current working directory in any case.
+- (optional) **`interpolation`** :: `character` or `FALSE` (default: `FALSE`) — Set to "linear_function" to fill in missing values of `diff_estimate` or `diff_estimate_covariates`.
 
 **Examples**
 ```R
+> undid_stage_three("C:\\Users\\User\\Documents\\FilledDiffData")
+
+   silos       ATT_s    agg_ATT jackknife_SE p_value_RI
+1     34 -0.06459396 0.03605769  0.005326418  0.1764706
+2     57 -0.03469211         NA           NA         NA
+3     58  0.02929645         NA           NA         NA
+4     59  0.08529822         NA           NA         NA
+5     61  0.01843108         NA           NA         NA
+6     64    0.073632         NA           NA         NA
+7     71  0.05986926         NA           NA         NA
+8     72  0.08545259         NA           NA         NA
+9     85  0.05545955         NA           NA         NA
+10    88  0.05242378         NA           NA         NA
 ```
 
 #### 7. `plot_parallel_trends()` - 
