@@ -147,9 +147,11 @@ If errors persist, check to see if there are missing `diff_estiamtes` in the `fi
 10    88  0.05242378         NA           NA         NA
 ```
 
-#### 7. `plot_parallel_trends()` - 
+#### 7. `plot_parallel_trends()` - Returns combined trends data and displays plot. 
 
 The `plot_parallel_trends()` function combines the trends_data.csv's and plots parallel trends figures. There are a plethora of options for this function. Many arguments are the same as those used in the base functions `plot()` and `axis()`. 
+
+There are controls for tick marks, titles, point markers, line width, labels, colours, legend options, and more.
 
 **Arguments**:
 - **`dir_path`** :: `character` — A string filepath to folder containing all of the `trends_data.csv`s.
