@@ -82,7 +82,7 @@ empty_diff_df.csv saved to: C:/Users/User/Documents/empty_diff_df.csv
 
 ## Stage Two: Silo
 
-#### 5. `undid_stage_two()` - 
+#### 5. `undid_stage_two()` - Returns a list of filepaths and dataframes.
 
 The `undid_stage_two()` function uses date information from the `empty_diff_df.csv` and the local silo data to fill in the necessary diff_estimates.
 
