@@ -45,7 +45,7 @@ Ensure that dates are all entered in the same date format, a list of acceptable 
 - **`start_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of start times corresponding to the silos.
 - **`end_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of end times corresponding to the silos.
 - **`treatment_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of treatment times, or `"control"` to indicate when treatment started for each silo.
-- **`covariates`** :: `character vector` or `FALSE` (optional, default: `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
+- (optional) **`covariates`** :: `character vector` or `FALSE` (default: `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
 
 **Examples**
 ```R
@@ -58,6 +58,16 @@ init.csv saved to: C:/Users/User/Documents/init.csv
 
 #### 4. `create_diff_df()` - Returns a dataframe and prints a filepath.
 
+Generates the `empty_diff_df.csv` file specifying all of the relevant regressions that are to be run at each silo. The `empty_diff_df.csv` file is sent to each silo in order to be filled out.
+
+Covariates may be specified when calling `create_init_csv()` or when calling `create_diff_df()`.
+
+**Arguments**:
+- **`filepath`** ::
+- **`date_format`** ::
+- **`freq`** ::
+- **`covariates`** ::
+- (optional) **`freq_multiplier`** ::
 
 
 
