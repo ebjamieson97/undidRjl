@@ -45,6 +45,7 @@ Ensure that dates are all entered in the same date format, a list of acceptable 
 - **`start_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of start times corresponding to the silos.
 - **`end_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of end times corresponding to the silos.
 - **`treatment_times`** :: `character vector` or `NA` (default: `NA`) — A character vector of treatment times, or `"control"` to indicate when treatment started for each silo.
+  
 - (optional) **`covariates`** :: `character vector` or `FALSE` (default: `FALSE`) — A character vector of covariates, or `FALSE` to exclude covariates.
 
 **Examples**
@@ -63,13 +64,55 @@ Generates the `empty_diff_df.csv` file specifying all of the relevant regression
 Covariates may be specified when calling `create_init_csv()` or when calling `create_diff_df()`.
 
 **Arguments**:
-- **`filepath`** ::
-- **`date_format`** ::
-- **`freq`** ::
-- **`covariates`** ::
-- (optional) **`freq_multiplier`** ::
+- **`filepath`** :: `character` — Filepath to the `init.csv`.
+- **`date_format`** :: `character` — Specify the [format](#valid-date-formats) of the dates in the `init.csv`.
+- **`freq`** :: `character` — Specify the frequency of the data to be analyzed ("daily", "weekly", "monthly", or "yearly").
 
+- (optional) **`covariates`** :: `character vector` or `FALSE` (default: `FALSE`) — Vector of covariates or `FALSE` to use covariates found in the `init.csv`.
+- (optional) **`freq_multiplier`** :: `integer` or `FALSE` (default: `FALSE`) — An integer, if required, to multiply with the freq (e.g. if you are analyzing data that is collected every 3 months you would set freq_multiplier = 3 and freq = "monthly")
 
+**Examples**
+```R
+> create_diff_df("C:/Users/User/Documents/init.csv", "yyyy", "yearly")
+empty_diff_df.csv saved to: C:/Users/User/Documents/empty_diff_df.csv 
+  silo_name treat common_treatment_time start_time   end_time diff_estimate diff_var diff_estimate_covariates diff_var_covariates covariates date_format    freq
+1        ON     0                  2016 2010-01-01 2022-01-01       missing  missing                  missing              missing       none        yyyy 1 year
+2        QC     1                  2016 2010-01-01 2022-01-01       missing  missing                  missing              missing       none        yyyy 1 year 
+```
+
+## Stage Two: Silo
+
+#### 5. `undid_stage_two()` - 
+
+Ipsum lorem
+
+**Arguments**:
+
+**Examples**
+```R
+```
+
+## Stage Three: Analysis
+
+#### 6. `undid_stage_three()` - 
+
+Ipsum lorem
+
+**Arguments**:
+
+**Examples**
+```R
+```
+
+#### 7. `plot_parallel_trends()` - 
+
+Ipsum lorem
+
+**Arguments**:
+
+**Examples**
+```R
+```
 
 ## Appendix
 
