@@ -59,7 +59,7 @@ init.csv saved to: C:/Users/User/Documents/init.csv
 
 #### 4. `create_diff_df()` - Returns a dataframe and prints a filepath.
 
-Generates the `empty_diff_df.csv` file specifying all of the relevant regressions that are to be run at each silo. The `empty_diff_df.csv` file is sent to each silo in order to be filled out.
+Generates the `empty_diff_df.csv` file. The `empty_diff_df.csv` file is sent to each silo in order to be filled out.
 
 Covariates may be specified when calling `create_init_csv()` or when calling `create_diff_df()`.
 
